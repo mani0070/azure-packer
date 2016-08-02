@@ -1,0 +1,40 @@
+ {
+ "builders": [{
+    "type": "azure-arm",
+
+    "client_id": "419a1779-2759-4a21-bf16-91a09247c8ce",
+    "client_secret": "bb6UckwnyTtUxRwtIghzkygExEcHe4xpYB1GCzPoug0=",
+    "resource_group_name": "DilabsImages",
+    "storage_account": "dilabsstorageaccount",
+    "subscription_id": "9cfdd2bf-eab4-fgfgf-gghf-rtfgfghdd",
+    "tenant_id": "dfgdfg5-2789-fddfdf-9076-gdf4sdfsdf",
+	"object_id": "d93d0bd7-55da-47b4-b5a6-471816db08ab",
+
+    "capture_container_name": "images",
+    "capture_name_prefix": "packer",
+	"os_type": "Windows",
+    "image_publisher": "MicrosoftWindowsServer",
+    "image_offer": "WindowsServer",
+    "image_sku": "2012-R2-Datacenter",
+	
+    "location": "North Europe",
+    "vm_size": "Standard_A1",
+	
+	"communicator": "winrm", 
+    "winrm_use_ssl": "true", 
+    "winrm_insecure": "true", 
+    "winrm_timeout": "3m", 
+    "winrm_username": "packer"
+}
+],
+   "provisioners": [
+{
+  "type": "powershell",
+  "inline": [
+    "dir c:\\"
+  ]
+}
+]
+}
+
+
