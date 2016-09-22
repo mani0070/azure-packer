@@ -1,0 +1,38 @@
+ {
+ "builders": [{
+    "type": "azure-arm",
+    "subscription_id": "ee339554-fefd-4fab-a3ba-98ae55b8a087",
+	"tenant_id": "4af8322c-80ee-4819-a9ce-863d5afbea1c",
+   "object_id": "f74ddf02-f909-446a-b754-9557c078fdef",
+    "client_id": "398c1738-2470-40c3-b84f-2619c93fdfcb",
+    "client_secret": "hzkygExEcHe4xph38sdhOI37YB1GCzPoug0=",
+    "resource_group_name": "demo2",
+    "storage_account": "demo2storage25082016",
+    "capture_container_name": "images",
+    "capture_name_prefix": "packer",
+	"os_type": "Windows",
+    "image_publisher": "MicrosoftWindowsServer",
+    "image_offer": "WindowsServer",
+    "image_sku": "2012-R2-Datacenter",
+    "location": "North Europe",
+    "vm_size": "Standard_A1",
+	"communicator": "winrm", 
+    "winrm_use_ssl": "true", 
+    "winrm_insecure": "true", 
+    "winrm_timeout": "3m", 
+    "winrm_username": "packer"
+}
+],
+ "provisioners": [
+  {
+  "type": "dsc",
+  "manifest_file": "web.ps1",
+  "configuration_file": "web.psd1",
+  "configuration_params": { }
+}
+  ]
+}
+//read https://www.packer.io/docs/provisioners/powershell.html
+//https://github.com/mefellows/packer-dsc
+
+

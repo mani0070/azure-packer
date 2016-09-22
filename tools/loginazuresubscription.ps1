@@ -8,3 +8,4 @@ $cred = new-object -typename System.Management.Automation.PSCredential `
          -argumentlist $username, $password
 
 Add-AzureRmAccount -Credential $cred -SubscriptionId $subscriptionid
+
