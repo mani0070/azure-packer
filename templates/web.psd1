@@ -1,7 +1,0 @@
-@{
-	AllNodes = @(
-		@{
-			NodeName = "web"
-		}
-	)
-}

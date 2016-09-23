@@ -2,3 +2,5 @@
 .refer/
 .rubbish/
 templates/srcFolder/
+*.ref.*
+.vscode
