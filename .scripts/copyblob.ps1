@@ -7,10 +7,10 @@ $destinationContainerName='vhds'
 $destinationblobName= 'osdiskforwindowssimple.vhd'
 $destinationResourceGroupName = 'demo'
 
-$sourceStorageAccountName='sourcesa'
+$sourceStorageAccountName='sourcesapacker20160930'
 $sourceContainerName='system'
 $sourceblobName= 'Microsoft.Compute/Images/images/packer-osDisk.d68f764c3351-xxxx-xxxx-xxxx-d68f764c3351.vhd'
-$sourceStorageAccountResourceGroup='demo2'
+$sourceStorageAccountResourceGroup='storecenter'
 
 <#Sample output:
 #$customimagebloburi='https://<storageAccount>.blob.core.windows.net/system/Microsoft.Compute/Images/images/packer-osDisk.63c7e823-xxxx-xxxx-xxxx-d68f764c3351.vhd

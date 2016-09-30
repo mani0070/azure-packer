@@ -4,3 +4,4 @@
 templates/srcFolder/
 *.ref.*
 .vscode
+geyik/
