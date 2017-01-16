@@ -1,0 +1,38 @@
+{
+ "builders": [{
+    "type": "azure-arm",
+    "subscription_id": "46bcb9e2-92d5-4a5c-9c58-4b5deb2b30d3",
+	"tenant_id": "e28c2f64-b9eb-4b88-a60f-3721cbe00669",
+    "object_id": "72aa226a-115c-407e-8a06-c6fbe96bdfc0",
+    "client_id": "88f0152e-d5ac-44c9-a8a2-eec29bf8c831",
+    "client_secret": "hzkygExEcHe4xph38sdhOI37YB1GCzPoug0=",
+    "resource_group_name": "storecenter",
+    "storage_account": "sourcesapacker20160930",
+    "capture_container_name": "images",
+    "capture_name_prefix": "packer",
+	"os_type": "Windows",
+    "image_publisher": "MicrosoftWindowsServer",
+    "image_offer": "WindowsServer",
+    "image_sku": "2012-R2-Datacenter",
+    "location": "North Europe",
+    "vm_size": "Standard_A1",
+	"communicator": "winrm", 
+    "winrm_use_ssl": "true", 
+    "winrm_insecure": "true", 
+    "winrm_timeout": "3m", 
+    "winrm_username": "packer"
+}
+],
+    "provisioners": [
+    {
+        "type": "dsc",
+        "manifest_file": "C:\\projects\\github\\Azure-Packer-Ebru\\templates\\refer\\web.ps1",
+        "configuration_file": "C:\\projects\\github\\Azure-Packer-Ebru\\templates\\refer\\web.psd1",
+        "configuration_params": { }
+    }
+  ]
+}
+//read https://www.packer.io/docs/provisioners/powershell.html
+//https://github.com/mefellows/packer-dsc
+
+

@@ -1,25 +1,21 @@
  {
  "builders": [{
     "type": "azure-arm",
-
-    "client_id": "419a1779-2759-4a21-bf16-91a09247c8ce",
-    "client_secret": "bb6UckwnyTtUxRwtIghzkygExEcHe4xpYB1GCzPoug0=",
-    "resource_group_name": "DilabsImages",
-    "storage_account": "dilabsstorageaccount",
-    "subscription_id": "9cfdd2bf-eab4-fgfgf-gghf-rtfgfghdd",
-    "tenant_id": "dfgdfg5-2789-fddfdf-9076-gdf4sdfsdf",
-	"object_id": "d93d0bd7-55da-47b4-b5a6-471816db08ab",
-
+    "subscription_id": "ee339554-xxxx-xxxx-xxxx-98ae55b8a087",
+	"tenant_id": "4af8322c-xxxx-xxxx-xxxx-863d5afbea1c",
+   "object_id": "f74ddf02-xxxx-xxxx-xxxx-9557c078fdef",
+    "client_id": "398c1738-xxxx-xxxx-xxxx-2619c93fdfcb",
+    "client_secret": "hzkygExEcHe4xxxxhOI37YB1GCzPoug0=",
+    "resource_group_name": "demo2",
+    "storage_account": "demo2storage",
     "capture_container_name": "images",
     "capture_name_prefix": "packer",
 	"os_type": "Windows",
     "image_publisher": "MicrosoftWindowsServer",
     "image_offer": "WindowsServer",
     "image_sku": "2012-R2-Datacenter",
-	
     "location": "North Europe",
     "vm_size": "Standard_A1",
-	
 	"communicator": "winrm", 
     "winrm_use_ssl": "true", 
     "winrm_insecure": "true", 
